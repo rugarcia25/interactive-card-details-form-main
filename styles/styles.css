@@ -187,6 +187,11 @@ p {
   color: hsl(270, 3%, 60%);
 }
 
+.form-date_numbers {
+  justify-content: start;
+  gap: 1rem;
+}
+
 .hidden {
   display: none;
 }
@@ -231,11 +236,6 @@ p {
   .form {
     max-width: 25%;
     min-width: 19rem;
-  }
-
-  .form-date_numbers {
-    justify-content: start;
-    gap: 1rem;
   }
 
   #section-hidden {
