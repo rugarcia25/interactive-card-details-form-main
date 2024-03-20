@@ -6,8 +6,8 @@ This is a solution to the [Interactive Card Details Form Main](https://www.front
 
 - [Overview](#overview)
   - [The challenge](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw)
-  - [Screenshot](./images/web.png)
-  - [Screenshot](./images/mobile.png)
+  - [Web](./images/web.png)
+  - [Mobile](./images/mobile.png)
 - [Author](#author)
 
 ## Overview
