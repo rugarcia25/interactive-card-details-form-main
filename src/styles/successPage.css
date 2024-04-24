@@ -1,0 +1,29 @@
+.completed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.completed > img {
+  width: 20%;
+}
+
+.completed > h1,
+p {
+  padding-top: 1rem;
+}
+
+#info {
+  color: hsl(270, 3%, 60%);
+}
+
+.form-date_numbers {
+  justify-content: start;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
