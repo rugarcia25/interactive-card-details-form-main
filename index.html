@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="src/styles/index.css" />
 
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
+    <canvas class="bg-color"></canvas>
     <main class="main-container">
       <section class="cards">
         <div class="front-card">
-          <img src="images/bg-card-front.png" alt="Imagen Frontal" />
+          <img src="./src/assets/images/bg-card-front.png" alt="Imagen Frontal" />
           <div class="front-card_data">
-            <img src="images/card-logo.svg" alt="Logo Tarjeta" />
-            <h1 class="card-number" id="card-number">0000 0000 0000 0000</h1>
+            <img src="./src/assets/images/card-logo.svg" alt="Logo Tarjeta" />
+            <h1 class="sr-only">Register your credit card today!</h1>
+            <span class="card-number" id="card-number">xxxx xxxx xxxx xxxx</span>
             <div class="front-card_info">
               <p class="card-name" id="card-name">Jane Appleseed</p>
               <p class="card-date">
@@ -26,7 +28,7 @@
           </div>
         </div>
         <div class="back-card">
-          <img src="images/bg-card-back.png" alt="" />
+          <img src="./src/assets/images/bg-card-back.png" alt="credit card back" />
           <div class="back-card_data">
             <p class="card-cvc" id="card-cvc">000</p>
           </div>
@@ -36,65 +38,61 @@
         <label for="form-name">Cardholder Name</label>
         <input
           type="text"
+          name="form-name"
           id="form-name"
           onkeydown="return /[a-zA-Z, ]/i.test(event.key)"
-          placeholder="e.g. Jane Appleseed"
           maxlength="26"
-          required
         />
         <label for="form-number">Card Number</label>
         <input
           type="text"
+          name="form-number"
           id="form-number"
-          placeholder="e.g. 1234 5678 9123 0000"
-          minlength="16"
-          maxlength="16"
-          required
+          maxlength="19"
+          onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
         />
         <div class="form-date-cvc">
           <div class="form-date">
-            <label>Exp. Date (MM/YY)</label>
+            <span>Exp. Date (MM/YY)</span>
             <div class="form-date_numbers">
+              <label class="sr-only" for="form-month">Card Month</label>
               <input
+                name="form-month"
                 type="text"
                 id="form-month"
-                placeholder="MM"
-                minlength="2"
                 maxlength="2"
-                required
+                onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
               />
+              <label class="sr-only" for="form-year">Card Year</label>
               <input
                 type="text"
+                name="form-year"
                 id="form-year"
-                placeholder="YY"
-                minlength="2"
+                onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
                 maxlength="2"
-                required
               />
             </div>
           </div>
           <div class="form-cvc">
             <label for="form-cvc">CVC</label>
-            <input
-              type="text"
-              id="form-cvc"
-              placeholder="e.g. 123"
-              minlength="3"
-              maxlength="3"
-              required
-            />
+            <input type="text" name="form-cvc" id="form-cvc" maxlength="3" />
           </div>
         </div>
         <button id="btn-confirm" type="submit">Confirm</button>
       </form>
       <section class="completed hidden" id="section-hidden">
-        <img src="images/icon-complete.svg" alt="Imagen verificadora" />
+        <img src="./src/assets/images/icon-complete.svg" alt="Imagen verificadora" />
         <h1 id="thanks">Thank you!</h1>
         <p id="info">We've added your card details</p>
         <button id="btn-continue">Continue</button>
       </section>
     </main>
-
-    <script src="./js/app.js" defer></script>
   </body>
+  <script src="./src/js/services/submit/submit.js" defer></script>
+  <script src="./src/js/services/card/card.js" defer></script>
+  <script src="./src/js/services/form/cvc.js" defer></script>
+  <script src="./src/js/services/form/month.js" defer></script>
+  <script src="./src/js/services/form/name.js" defer></script>
+  <script src="./src/js/services/form/number.js" defer></script>
+  <script src="./src/js/services/form/year.js" defer></script>
 </html>
