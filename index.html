@@ -12,87 +12,62 @@
   <body>
     <canvas class="bg-color"></canvas>
     <main class="main-container">
-      <section class="cards">
-        <div class="front-card">
-          <img src="./src/assets/images/bg-card-front.png" alt="Imagen Frontal" />
-          <div class="front-card_data">
-            <img src="./src/assets/images/card-logo.svg" alt="Logo Tarjeta" />
-            <h1 class="sr-only">Register your credit card today!</h1>
-            <span class="card-number" id="card-number">xxxx xxxx xxxx xxxx</span>
-            <div class="front-card_info">
-              <p class="card-name" id="card-name">Jane Appleseed</p>
-              <p class="card-date">
-                <span id="card-month">00</span>/<span id="card-year">00</span>
-              </p>
+      <div class="container">
+        <section class="cards">
+          <div class="front-card">
+            <img src="./src/assets/images/bg-card-front.png" alt="Imagen Frontal" />
+            <div class="front-card_data" id="card-data">
+              <img src="./src/assets/images/card-logo.svg" alt="Logo Tarjeta" />
+              <h1 class="sr-only">Register your credit card today!</h1>
+              <span class="card-number" id="card-number">xxxx xxxx xxxx xxxx</span>
+              <div class="front-card_info">
+                <p id="card-name"></p>
+                <p class="card-date">
+                  <span id="card-month">xx</span>/<span id="card-year">xx</span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="back-card">
-          <img src="./src/assets/images/bg-card-back.png" alt="credit card back" />
-          <div class="back-card_data">
-            <p class="card-cvc" id="card-cvc">000</p>
-          </div>
-        </div>
-      </section>
-      <form id="datos" class="form">
-        <label for="form-name">Cardholder Name</label>
-        <input
-          type="text"
-          name="form-name"
-          id="form-name"
-          onkeydown="return /[a-zA-Z, ]/i.test(event.key)"
-          maxlength="26"
-        />
-        <label for="form-number">Card Number</label>
-        <input
-          type="text"
-          name="form-number"
-          id="form-number"
-          maxlength="19"
-          onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
-        />
-        <div class="form-date-cvc">
-          <div class="form-date">
-            <span>Exp. Date (MM/YY)</span>
-            <div class="form-date_numbers">
-              <label class="sr-only" for="form-month">Card Month</label>
-              <input
-                name="form-month"
-                type="text"
-                id="form-month"
-                maxlength="2"
-                onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
-              />
-              <label class="sr-only" for="form-year">Card Year</label>
-              <input
-                type="text"
-                name="form-year"
-                id="form-year"
-                onkeydown="return !(/^[A-Za-z]$/).test(event.key)"
-                maxlength="2"
-              />
+          <div class="back-card">
+            <img src="./src/assets/images/bg-card-back.png" alt="credit card back" />
+            <div class="back-card_data">
+              <p class="card-cvc" id="card-cvc"></p>
             </div>
           </div>
-          <div class="form-cvc">
-            <label for="form-cvc">CVC</label>
-            <input type="text" name="form-cvc" id="form-cvc" maxlength="3" />
+        </section>
+        <form id="datos" class="form">
+          <label for="form-name">Cardholder Name</label>
+          <input type="text" name="form-name" id="form-name" maxlength="26" />
+          <label for="form-number">Card Number</label>
+          <input type="text" name="form-number" id="form-number" maxlength="19" />
+          <div class="form-date-cvc">
+            <div class="form-date">
+              <span>Exp. Date (MM/YY)</span>
+              <div class="form-date_numbers">
+                <label class="sr-only" for="form-month">Card Month</label>
+                <input name="form-month" type="text" id="form-month" maxlength="2" />
+                <label class="sr-only" for="form-year">Card Year</label>
+                <input type="text" name="form-year" id="form-year" maxlength="2" />
+              </div>
+            </div>
+            <div class="form-cvc">
+              <label for="form-cvc">CVC</label>
+              <input type="text" name="form-cvc" id="form-cvc" maxlength="3" />
+            </div>
           </div>
-        </div>
-        <button id="btn-confirm" type="submit">Confirm</button>
-      </form>
-      <section class="completed hidden" id="section-hidden">
-        <img src="./src/assets/images/icon-complete.svg" alt="Imagen verificadora" />
-        <h1 id="thanks">Thank you!</h1>
-        <p id="info">We've added your card details</p>
-        <button id="btn-continue">Continue</button>
-      </section>
+          <button id="btn-confirm" type="submit">Confirm</button>
+        </form>
+        <section class="completed hidden" id="section-hidden">
+          <img src="./src/assets/images/icon-complete.svg" alt="Imagen verificadora" />
+          <h1 id="thanks">Thank you!</h1>
+          <p id="info">We've added your card details</p>
+          <button type="button" id="btn-continue">Continue</button>
+        </section>
+      </div>
     </main>
+    <script src="./src/js/services/submit/submit.js" defer></script>
+    <script src="./src/js/services/card/card.js" defer></script>
+    <script src="./src/js/services/form/updateValues.js" defer></script>
+    <script src="./src/js/services/form/number.js" defer></script>
   </body>
-  <script src="./src/js/services/submit/submit.js" defer></script>
-  <script src="./src/js/services/card/card.js" defer></script>
-  <script src="./src/js/services/form/cvc.js" defer></script>
-  <script src="./src/js/services/form/month.js" defer></script>
-  <script src="./src/js/services/form/name.js" defer></script>
-  <script src="./src/js/services/form/number.js" defer></script>
-  <script src="./src/js/services/form/year.js" defer></script>
 </html>
