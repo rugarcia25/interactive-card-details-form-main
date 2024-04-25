@@ -10,10 +10,20 @@
   font-weight: 500;
 }
 
-body {
-  min-height: 100vh;
+canvas {
+  position: absolute;
+  left: 0;
+  z-index: -1;
   background-image: url('../assets/images/bg-main-mobile.png');
   background-repeat: no-repeat;
+  height: 100%;
+
+  width: 33%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
   background-size: 100%;
 }
 
