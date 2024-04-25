@@ -1,19 +1,23 @@
-const form = document.getElementById('datos');
-const btnContinue = document.getElementById('btn-continue');
-const sectionHidden = document.getElementById('section-hidden');
-const cardNumber = document.getElementById('card-number');
-const cardName = document.getElementById('card-name');
-const cardMonth = document.getElementById('card-month');
-const cardYear = document.getElementById('card-year');
-const cardCvc = document.getElementById('card-cvc');
+const cardForm = document.querySelector('#datos');
+
+const btnContinue = document.querySelector('#btn-continue');
+
+const sectionHidden = document.querySelector('#section-hidden');
+const number = document.querySelector('#card-number');
+const name = document.querySelector('#card-name');
+const month = document.querySelector('#card-month');
+const year = document.querySelector('#card-year');
+const cvc = document.querySelector('#card-cvc');
 
 btnContinue.addEventListener('click', () => {
-  form.classList.remove('hidden');
+  cardForm.classList.remove('hidden');
   sectionHidden.classList.add('hidden');
-  form.reset(); // Reset form
-  cardName.innerText = 'Jane Appleseed';
-  cardNumber.innerText = 'xxxx xxxx xxxx xxxx';
-  cardMonth.innerText = '00';
-  cardYear.innerText = '00';
-  cardCvc.innerText = '000';
+
+  cardForm.reset();
+
+  name.innerText = 'xxxxx xxxxxxx';
+  number.innerText = 'xxxx xxxx xxxx xxxx';
+  month.innerText = 'xx';
+  year.innerText = 'xx';
+  cvc.innerText = 'xxx';
 });
