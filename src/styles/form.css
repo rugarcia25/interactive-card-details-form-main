@@ -1,0 +1,56 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 0.8rem;
+}
+
+input {
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border-radius: 0.35rem;
+  border: 0.1rem solid lightgray;
+  cursor: text;
+  letter-spacing: 0.1rem;
+}
+
+input:active {
+  border: 1px solid hsl(278, 49%, 44%);
+}
+
+.form-date-cvc {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.form-date {
+  width: 60%;
+}
+
+.form-date_numbers {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 1.5rem;
+}
+
+#form-month,
+#form-year {
+  text-align: center;
+  width: 40%;
+}
+
+.form-cvc {
+  width: 40%;
+}
+
+.form-cvc > input {
+  display: flex;
+  width: 100%;
+}

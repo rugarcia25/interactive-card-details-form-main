@@ -1,0 +1,61 @@
+@media screen and (min-width: 785px) {
+  canvas {
+    background-image: url('../../src/assets/images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
+  .cards {
+    gap: 1rem;
+    width: auto;
+    margin-right: 8rem;
+  }
+
+  .card-number {
+    font-size: larger;
+  }
+
+  .front-card {
+    order: 1;
+    margin-top: 0;
+  }
+
+  .back-card {
+    order: 2;
+  }
+
+  .form {
+    background-color: white;
+    max-width: 25%;
+    min-width: 19rem;
+  }
+
+  #section-hidden {
+    width: 28rem;
+  }
+
+  #btn-continue {
+    width: 70%;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: fit-content;
+  }
+}

@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive Card Details Form Main
 
-This is a solution to the [Interactive Card Details Form Main](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). 
+This is a solution to the [Interactive Card Details Form Main](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
 
 ## Table of contents
 
@@ -19,7 +19,7 @@ This is a solution to the [Interactive Card Details Form Main](https://www.front
 
 ### Links
 
-- Solution URL: [[https://github.com/rugarcia25/interactive-card-details-form-main](https://github.com/rugarcia25/interactive-card-details-form-main)] 
+- Solution URL: [[https://github.com/rugarcia25/interactive-card-details-form-main](https://github.com/rugarcia25/interactive-card-details-form-main)]
 - Live Site URL: [[https://rugarcia25.github.io/interactive-card-details-form-main/](https://rugarcia25.github.io/interactive-card-details-form-main/)]
 
 ### Built with
